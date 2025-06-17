@@ -1,0 +1,10 @@
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.cart-span:hover {
+  color:rgb(201, 23, 23);
+}

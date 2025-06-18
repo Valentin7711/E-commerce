@@ -4,7 +4,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ErrorPage from "./components/ErrorPage";
 
-function App() {
+const App = () => {
   return (
      <BrowserRouter>
      <NavBar />

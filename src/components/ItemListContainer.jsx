@@ -17,7 +17,7 @@ import { getProducts, getProductsByCategory } from "../mock/Mock";
   }, [categoryId]);
 
   return (
-    <div>
+    <div className="lista">
       <h2>{categoryId ? `Categoría: ${categoryId}` : "Lista de Productos"}</h2>
       <ItemList items={productos} />
     </div>

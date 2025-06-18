@@ -1,9 +1,10 @@
 body {
-  margin: 0; 
-  padding: 0; 
+   margin: 0; 
+   padding: 0; 
   background-image: url("../public/img/fondo-tienda.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+

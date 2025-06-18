@@ -16,7 +16,7 @@ import "../styles/ItemDetailContainer.css"
   }, [productId]);
 
   return (
-    <div className="cargando-producto">{product ? <ItemDetail product={product} /> : <p>Cargando producto...</p>}</div>
+    <div className="cargando-producto">{product ? <ItemDetail product={product} /> : <p className="p-cargando">Cargando producto...</p>}</div>
   );
 }
 

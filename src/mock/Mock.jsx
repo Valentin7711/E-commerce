@@ -34,13 +34,13 @@ const products = [
 ];
 
 
-export function getProducts() {
+export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => resolve(products), 1000);
   });
 }
 
-export function getProductsByCategory(category) {
+export const getProductsByCategory = (category) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.filter(p => p.category === category));
@@ -48,7 +48,7 @@ export function getProductsByCategory(category) {
   });
 }
 
-export function getProductById(id) {
+export const getProductById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find(p => p.id === parseInt(id)));

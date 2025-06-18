@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/ItemDetail.css";
 
-function ItemDetail({ product }) {
+const ItemDetail = ({ product }) =>{
   const [cantidad, setCantidad] = useState(1);
 
   return (

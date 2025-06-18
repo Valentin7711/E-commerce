@@ -2,7 +2,7 @@
 
 import Item from "./Item";
 
- function ItemList({ items }) {
+ const ItemList = ({ items }) => {
   return (
     <div className="item-list">
       {items.map(item => (

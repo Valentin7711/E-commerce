@@ -6,7 +6,7 @@ import { getProductById } from "../mock/Mock";
 import ItemDetail from "./ItemDetail";
 import "../styles/ItemDetailContainer.css"
 
- function ItemDetailContainer() {
+ const ItemDetailContainer = () =>{
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
 

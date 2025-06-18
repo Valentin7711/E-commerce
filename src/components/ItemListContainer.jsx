@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import { getProducts, getProductsByCategory } from "../mock/Mock";
 
- function ItemListContainer() {
+ const ItemListContainer = () => {
   const { categoryId } = useParams();
   const [productos, setProductos] = useState([]);
 

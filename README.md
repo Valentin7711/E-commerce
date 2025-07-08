@@ -2,6 +2,8 @@
 
 Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase para la gestión de productos y órdenes de compra.
 
+![Imagen](/public/img/Captura%20de%20pantalla.png)
+
 ---
 
 ## 📦 Características
@@ -28,17 +30,17 @@ Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase pa
 ## 👨‍💻 Autor
 
 - Valentín Bauducco
-Estudiante del curso de React de Coderhouse  
-GitHub:📍 [Valentin7711](https://github.com/Valentin7711)
+- Estudiante del curso de React de Coderhouse  
+- GitHub:📍 [Valentin7711](https://github.com/Valentin7711)
 
 ---
 
 ## 🚀 Cómo clonar y correr el proyecto
 ### 1. Clonar el repositorio
 
-Abrí tu terminal y ejecutá:
+- Abrí tu terminal y ejecutá:
 
-git clone https://github.com/Valentin7711/E-commerce.git
-cd E-commerce
-npm install
-npm run dev
+- git clone https://github.com/Valentin7711/E-commerce.git
+- cd E-commerce
+- npm install
+- npm run dev

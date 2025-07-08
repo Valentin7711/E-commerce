@@ -1,14 +1,16 @@
-import "../styles/CartWidget.css"
 import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
+import "../styles/CartWidget.css";
 
 const CartWidget = () => {
-  const itemCount = 7;
+  const { totalItems } = useCart();
 
   return (
-    <div className="cart">
+    <Link to="/cart" className="cart">
       <FaShoppingCart size={24} />
-      <span className="cart-span">{itemCount}</span>
-    </div>
+      <span className="cart-span">{totalItems}</span>
+    </Link>
   );
 };
 

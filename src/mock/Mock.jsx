@@ -4,7 +4,7 @@ const products = [
     name: "Camiseta",
     category: "ropa",
     price: 200,
-    stock:"5",
+    stock: 5,
     img:"camiseta.png"
   },
   { 
@@ -12,7 +12,7 @@ const products = [
     name: "Pantalón",
     category: "ropa",
     price: 300,
-    stock:"6",
+    stock: 6,
     img: "pantalon.png"
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: "Zapatillas",
     category: "calzado",
     price: 500,
-    stock:"7",
+    stock: 7,
     img:"zapatillas.png" 
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: "Gorra",
     category: "accesorios",
     price: 150,
-    stock:"2",
+    stock: 2 ,
     img:"gorras.png" 
   },
 ];

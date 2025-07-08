@@ -1,0 +1,17 @@
+.empy-cart {
+    text-align: center;
+    padding: 4rem;
+}
+
+.inicio {
+  padding: 20px 70px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inicio:hover {
+    background-color: #555;
+}

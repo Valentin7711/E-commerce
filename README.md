@@ -1,12 +1,44 @@
-# React + Vite
+# 🛒 E-commerce - Coderhouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase para la gestión de productos y órdenes de compra.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Características
 
-## Expanding the ESLint configuration
+- 🧾 Visualización de productos desde Firebase
+- 🛍 Agregar, eliminar y vaciar el carrito
+- 🔎 Filtrado por categoría
+- 🧑‍💻 Detalle individual de cada producto
+- 📋 Checkout con formulario y validación de datos
+- 🔥 Almacenamiento de órdenes en Firestore
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- React
+- React Router DOM
+- Firebase (Firestore)
+- Vite
+- CSS
+
+---
+
+## 👨‍💻 Autor
+
+- Valentín Bauducco
+Estudiante del curso de React de Coderhouse  
+GitHub:📍 [Valentin7711](https://github.com/Valentin7711)
+
+---
+
+## 🚀 Cómo clonar y correr el proyecto
+### 1. Clonar el repositorio
+
+Abrí tu terminal y ejecutá:
+
+git clone https://github.com/Valentin7711/E-commerce.git
+cd E-commerce
+npm install
+npm run dev

@@ -1,23 +1,48 @@
-// contenedor detalle producto
-
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProductById } from "../mock/Mock";
+import { useParams, Link } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import "../styles/ItemDetailContainer.css"
+import "../styles/ItemDetailContainer.css";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../service/Firebase";
 
- const ItemDetailContainer = () =>{
+const ItemDetailContainer = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const [invalid, setInvalid] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProductById(productId)
-    .then(data => setProduct(data));
+    const docRef = doc(db, "coderhouse", productId);
+    getDoc(docRef)
+      .then((res) => {
+        if (res.exists()) {
+          setProduct({ id: res.id, ...res.data() });
+        } else {
+          setInvalid(true);
+        }
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
   }, [productId]);
 
-  return (
-    <div className="cargando-producto">{product ? <ItemDetail product={product} /> : <p className="p-cargando">Cargando producto...</p>}</div>
-  );
-}
+  if (loading) {
+    return <p className="p-cargando">Cargando producto...</p>;
+  }
 
-export default ItemDetailContainer
+  if (invalid) {
+    return (
+      <div>
+        <h1>Producto no encontrado</h1>
+        <Link to="/">Volver a Home</Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="detalle-producto">
+      <ItemDetail product={product} />
+    </div>
+  );
+};
+
+export default ItemDetailContainer;

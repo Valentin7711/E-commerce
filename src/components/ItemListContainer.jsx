@@ -1,27 +1,42 @@
-// contenedor lista de productos
-import "../styles/ItemListContainer.css"
-
+import "../styles/ItemListContainer.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import { getProducts, getProductsByCategory } from "../mock/Mock";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../service/Firebase";
 
- const ItemListContainer = () => {
+const ItemListContainer = () => {
   const { categoryId } = useParams();
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const pedirProductos = categoryId ? getProductsByCategory : getProducts;
-    pedirProductos(categoryId)
-    .then((respuesta) => setProductos(respuesta));
+    setLoading(true);
+
+    const productsCollection = collection(db, "coderhouse");
+
+    const consulta = categoryId
+      ? query(productsCollection, where("category", "==", categoryId))
+      : productsCollection;
+
+    getDocs(consulta)
+      .then((res) => {
+        const list = res.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProductos(list);
+      })
+      .catch((error) => console.log("Error al obtener productos:", error))
+      .finally(() => setLoading(false));
   }, [categoryId]);
 
   return (
     <div className="lista">
       <h2>{categoryId ? `Categoría: ${categoryId}` : "Lista de Productos"}</h2>
-      <ItemList items={productos} />
+      {loading ? <p>Cargando productos...</p> : <ItemList items={productos} />}
     </div>
   );
-}
+};
 
-export default ItemListContainer
+export default ItemListContainer;

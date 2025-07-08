@@ -1,7 +1,7 @@
 body {
    margin: 0; 
    padding: 0; 
-  background-image: url("../public/img/fondo-tienda.jpg");
+  background-image: url("/img/fondo-tienda.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

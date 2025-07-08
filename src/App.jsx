@@ -6,6 +6,8 @@ import ErrorPage from "./components/ErrorPage";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import "./styles/responsive.css";
+
 
 const App = () => {
   return (

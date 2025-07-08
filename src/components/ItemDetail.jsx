@@ -1,14 +1,24 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "../styles/ItemDetail.css";
+import Swal from "sweetalert2";
+
 
 const ItemDetail = ({ product }) => {
   const [cantidad, setCantidad] = useState(1);
   const { addToCart } = useCart();
 
-  const handleAgregar = () => {
-    addToCart(product, cantidad);
-  };
+ const handleAgregar = () => {
+  addToCart(product, cantidad);
+  Swal.fire({
+    icon: 'success',
+    title: 'Producto agregado',
+    text: `${cantidad} ${product.name} se agregaron al carrito`,
+    timer: 1500,
+    showConfirmButton: false,
+  });
+};
+
 
   return (
     <div className="item-detail">

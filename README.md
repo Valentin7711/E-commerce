@@ -21,6 +21,7 @@ Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase pa
 
 - React
 - React Router DOM
+- SweetAlert2
 - Firebase (Firestore)
 - Vite
 - CSS

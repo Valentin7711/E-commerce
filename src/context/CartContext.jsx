@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
+
 // Crear el contexto
 const CartContext = createContext();
 
@@ -11,17 +12,31 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   // Agregar un producto al carrito
-  const addToCart = (item, cantidad) => {
-    const existe = cart.find(prod => prod.id === item.id);
-    if (existe) {
-      const carritoActualizado = cart.map(prod =>
-        prod.id === item.id ? { ...prod, cantidad: prod.cantidad + cantidad } : prod
-      );
-      setCart(carritoActualizado);
-    } else {
-      setCart([...cart, { ...item, cantidad }]);
+const addToCart = (item, cantidad) => {
+  const productoEnCarrito = cart.find(prod => prod.id === item.id);
+
+  if (productoEnCarrito) {
+    if (productoEnCarrito.cantidad + cantidad > item.stock) {
+      return `Solo hay ${item.stock} unidades disponibles.`;
     }
-  };
+
+    const carritoActualizado = cart.map(prod =>
+      prod.id === item.id
+        ? { ...prod, cantidad: prod.cantidad + cantidad }
+        : prod
+    );
+    setCart(carritoActualizado);
+    return "Producto actualizado en el carrito.";
+  }
+
+  if (cantidad > item.stock) {
+    return `Solo hay ${item.stock} unidades disponibles.`;
+  }
+
+  setCart([...cart, { ...item, cantidad }]);
+  return "Producto agregado al carrito.";
+};
+
 
   // Eliminar un producto por ID
   const removeItem = (id) => {

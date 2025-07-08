@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { db } from '../service/firebase';
+import { db } from '../service/Firebase';
 import '../styles/Checkout.css';
 
 const Checkout = () => {

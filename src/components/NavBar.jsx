@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="mi-ecommerse">
        <NavLink to="/"> Mi <span className="span-ecommerce">E-Commerce</span></NavLink>
       </div>
-      <h1>Bienvenidos a mi Tienda</h1>
+      <h1 className="tienda">Bienvenidos a mi Tienda</h1>
       <ul className="nav-bar">
         <li>
           <NavLink to="/">Todos</NavLink>

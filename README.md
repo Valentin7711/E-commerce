@@ -20,9 +20,9 @@ Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase pa
 ## ⚙️ Tecnologías utilizadas
 
 - React
-- React Router DOM
-- SweetAlert2
-- Firebase (Firestore)
+- React Router DOM: Utilizados para la navegacion de rutas.
+- SweetAlert2: Utilizados para la agregacion de estilos de alerta.
+- Firebase (Firestore): Utilizado para la base de datos.
 - Vite
 - CSS
 
@@ -37,6 +37,7 @@ Este es un proyecto de e-commerce desarrollado con React, utilizando Firebase pa
 ---
 
 ## 🚀 Cómo clonar y correr el proyecto
+
 ### 1. Clonar el repositorio
 
 - Abrí tu terminal y ejecutá:

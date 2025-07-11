@@ -5,8 +5,14 @@
     gap: 1rem;
   }
 
+  .tienda {
+    display: flex;
+    align-items: center;
+  }
+
   .nav-bar {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     width: 100%;
   }
@@ -17,7 +23,8 @@
 
   .item-card {
     width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto 16px auto; 
   }
 
   .cart-container,
@@ -35,7 +42,8 @@
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
+

@@ -4,6 +4,7 @@ import ItemDetail from "./ItemDetail";
 import "../styles/ItemDetailContainer.css";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../service/Firebase";
+import Loading from "./Loading"; 
 
 const ItemDetailContainer = () => {
   const { productId } = useParams();
@@ -26,7 +27,7 @@ const ItemDetailContainer = () => {
   }, [productId]);
 
   if (loading) {
-    return <p className="p-cargando">Cargando producto...</p>;
+    return <Loading />; 
   }
 
   if (invalid) {
